@@ -69,22 +69,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\ActionType.cs" />
+    <Compile Include="Attacker.cs" />
+    <Compile Include="Defenceman.cs" />
+    <Compile Include="IHockeyistStrategy.cs" />
     <Compile Include="IStrategy.cs" />
+    <Compile Include="Model\ActionType.cs" />
     <Compile Include="Model\Puck.cs" />
     <Compile Include="Model\HockeyistState.cs" />
     <Compile Include="Model\Game.cs" />
     <Compile Include="Model\Move.cs" />
-    <Compile Include="MyStrategy.cs" />
     <Compile Include="Model\Player.cs" />
     <Compile Include="Model\PlayerContext.cs" />
+    <Compile Include="MyStrategy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RemoteProcessClient.cs" />
-    <Compile Include="Runner.cs" />
     <Compile Include="Model\Hockeyist.cs" />
     <Compile Include="Model\HockeyistType.cs" />
     <Compile Include="Model\Unit.cs" />
     <Compile Include="Model\World.cs" />
+    <Compile Include="RemoteProcessClient.cs" />
+    <Compile Include="Runner.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">

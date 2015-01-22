@@ -1,4 +1,3 @@
-chcp 1251
 set name=MyStrategy
 
 if not exist %name%.cs (
@@ -6,7 +5,7 @@ if not exist %name%.cs (
     exit 1
 )
 
-del /F /Q %name%.mono.exe
+del /F /Q %name%.mono-exe
 
 SET FILES=
 
@@ -22,6 +21,4 @@ for %%i in (Properties\*.cs) do (
     call concatenate %%i
 )
 
-for /D %%i in (%windir%\Microsoft.NET\Framework\v*) do SET NET_HOME=%%i\
-
-call %NET_HOME%csc.exe /o+ /d:ONLINE_JUDGE /r:System.Numerics.dll /out:%name%.mono.exe %FILES% 1>compilation.log 2>&1
+call dmcs -define:ONLINE_JUDGE -o+ -sdk:4 -out:%name%.mono-exe %FILES% 2>compilation.log
